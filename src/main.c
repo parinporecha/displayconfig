@@ -86,8 +86,8 @@ xevent_filter (GdkXEvent *xevent,
 
   ev = xevent;
   if (ev->xany.type != xsync->sync_event_base + XSyncAlarmNotify) {
-	  monitor_manager = meta_monitor_manager_get ();
-	  meta_monitor_manager_handle_xevent (monitor_manager, ev);
+    monitor_manager = meta_monitor_manager_get ();
+    meta_monitor_manager_handle_xevent (monitor_manager, ev);
     return GDK_FILTER_CONTINUE;
   }
 
